@@ -1,0 +1,3 @@
+[submodule "code-scanner"]
+	path = Client/code-scanner
+	url = https://github.com/yuriy-budiyev/code-scanner

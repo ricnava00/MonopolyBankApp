@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textLog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#000"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:textColor="#0F0"
+            app:layout_constraintBottom_toTopOf="@+id/scanQR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="wrap"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setUserButton"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/setUserButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imposta nome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/requestPaymentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Richiedi pagamento"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setUserButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/bankruptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bancarotta"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setUserButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/deletePreferencesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Preferences"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registra..."
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/scanQR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QR"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Switch
+            android:id="@+id/blackTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tema scuro "
+            app:layout_constraintBottom_toBottomOf="@+id/setUserButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/setUserButton" />
+
+
+        <LinearLayout
+            android:id="@+id/bigBalance"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:divider="@drawable/divider"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            app:layout_constraintBottom_toTopOf="@+id/textLog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requestPaymentButton"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ScrollView
+                android:id="@+id/scrollBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:id="@+id/smallBalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@drawable/divider"
+                    android:orientation="vertical"
+                    android:showDividers="middle"></LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
+</RelativeLayout>
