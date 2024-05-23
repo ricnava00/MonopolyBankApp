@@ -1,6 +1,6 @@
 # Monopoly Credit Cards
 Play Monopoly with physical credit cards, with QRs and NFC tags\
-Each player will run the client application, which connects to a server backend. Only one game can be played at a time.
+Each player will run the client application, which connects to a server backend. Only one game can be played at a time.\
 ![home](img.jpg)
 
 ## Credit card preparation
